@@ -7,8 +7,13 @@ list_files() {
     done
 }
 
+print_authors() {
+    echo "Author: Adam Stratilík"
+}
+
 main() {
     list_files $1
+    print_authors
 }
 
 main "$@"
