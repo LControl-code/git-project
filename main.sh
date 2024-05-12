@@ -37,6 +37,25 @@ main() {
 
     list_files "$dir" "$suffix" "$recurse"
     print_authors
+
+
+    echo
+    echo "Testovacia časť:"
+    echo "Test 1: Bez suffixu, bez rekurzie:"
+    list_files "." "" false
+    echo
+
+    echo "Test 2: Bez suffixu, s rekurziou:"
+    list_files "." "" true
+    echo
+
+    echo "Test 3: So suffixom 'ma', bez rekurzie:"
+    list_files "." "ma" false
+    echo
+
+    echo "Test 4: So suffixom 'ma', s rekurziou:"
+    list_files "." "ma" true
+
 }
 
 main "$@"
